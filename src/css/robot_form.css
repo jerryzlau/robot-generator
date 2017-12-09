@@ -1,12 +1,52 @@
-.main{
-  color: red;
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .App h1 {
   display: flex;
   justify-content: center;
+  color: white;
+  /* border: 1px solid black; */
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  padding: 30px;
+  background: rgb(30, 228, 228);
+}
+
+.inputs {
+  padding: 30px;
+  background: white;
+  border-radius: 5px;
+  /* border: 1px solid black; */
+}
+
+.inputs * {
+  cursor: pointer;
+}
+
+.inputs label {
+  display: flex; 
+  flex-direction: column;
+}
+
+.inputs input:focus {
+  outline: none;
+}
+
+.inputs select {
+  border: none;
+  border: none;
+  background: none;
+}
+
+.inputs select:focus {
+  outline: none;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid black; */
 }

@@ -4,8 +4,11 @@ class RobotForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'jerry',
-      type: "?set=set1"
+      name: 'defaul',
+      type: "set_set1",
+      rangeX: 200,
+      rangeY: 200,
+      backGround: 0
     };
   }
 
@@ -17,25 +20,46 @@ class RobotForm extends Component {
 
   render() {
 
-    const { name, type } = this.state;
-    const url = `https://robohash.org/${name}/${type}`;
-
+    const { name, type, rangeX, rangeY, backGround } = this.state;
+    const url = `https://robohash.org/${name}/${type}/bgset_bg${backGround}/?size=${rangeX}x${rangeY}`;
+    console.log(url);
+    
     return <div className="form">
-        <div className="input">
+        <div className="inputs">
           <label>Name:
             <input onChange={this.update('name')}
             className="robot-name" />
           </label>
-          <select className="robot-types"
-          onChange={this.update('type')}>
-            <option value="?set=set1" default>Robot</option>
-            <option value="?set=set2">Monster</option>
-            <option value="?set=set3">Fancy Robot</option>
-            <option value="?set=set4">Cats</option>
+          <label> X-axis {rangeX}
+            <input type="range" 
+              value={rangeX}
+              min="50"
+              max="400"
+              onChange={this.update('rangeX')}/>
+          </label>
+          <label> Y-axis {rangeY}
+            <input type="range" 
+              value={rangeY}
+              min="50"
+              max="400"
+              onChange={this.update('rangeY')}/>
+          </label>
+          <select
+            onChange={this.update('type')}>
+            <option value="set_set1" default>Robot</option>
+            <option value="set_set2">Monster</option>
+            <option value="set_set3">Fancy Robot</option>
+            <option value="set_set4">Cats</option>
+          </select>
+          <select
+            onChange={this.update('backGround')}>
+            <option value="0" default>None</option>
+            <option value="1">Background 1</option>
+            <option value="2">Background 2</option>
           </select>
         </div>
 
-        <img src={url}/>
+        <img alt="robot" src={url}/>
       </div>;
   }
 }

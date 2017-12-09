@@ -6,9 +6,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <h1>
-        What is your character?
-      </h1>
+        <h1>
+          Chracter Generator
+        </h1>
         <RobotForm />
       </div>
     );
