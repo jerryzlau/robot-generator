@@ -33,15 +33,19 @@ class BreachEmail extends Component {
     if(hacks){
       return hacks.map((hack, idx) => {
         return (
-          <li>
-            <h4 key={idx}>{hack.Title}</h4>
-            <img src={`https://logo.clearbit.com/${hack.Domain}`}/>
-          </li>
+          <div key={idx}
+            className="hack">
+            <h4>{hack.Title}</h4>
+            <div className="hack-info">
+              <img src={`https://logo.clearbit.com/${hack.Domain}`} />
+              <p dangerouslySetInnerHTML={{__html: hack.Description}}/>
+            </div>
+          </div>
         );
       });
     }else{
       return (
-        <h2>No Hacks</h2>
+        <h2>No Hacks Detected</h2>
       );
     }
   }
@@ -50,6 +54,7 @@ class BreachEmail extends Component {
     console.log(this.state);
     return (
       <div className="breach-email">
+        <h1>Have your email been pwned?</h1>
         <form onSubmit={this.checkEmail}>
           <label>Check Email:
             <input type="text"
