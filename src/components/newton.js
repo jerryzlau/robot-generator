@@ -67,7 +67,7 @@ class Newton extends Component {
   render() {
     const { result, operation, expression } = this.state;
     return (
-      <div className="newton"
+      <div className="component"
         onSubmit={this.handleSubmit}>
         <h1>Newton Calculator</h1>
         <form>

@@ -5,7 +5,7 @@ class RobotForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'defaul',
+      name: 'default',
       type: "set_set1",
       rangeX: 200,
       rangeY: 200,
@@ -24,9 +24,9 @@ class RobotForm extends Component {
     const { name, type, rangeX, rangeY, backGround } = this.state;
     const url = `https://robohash.org/${name}/${type}/bgset_bg${backGround}/?size=${rangeX}x${rangeY}`;
     
-    return <div className="form">
-        <h1>Chracter Generator</h1>
-        <div className="inputs">
+    return <div className="component">
+        <h1>Character Generator</h1>
+        <form onSubmit={(e) => e.preventDefault()}>
           <label>
             Name:
             <input onChange={this.update("name")} className="robot-name" />
@@ -56,7 +56,7 @@ class RobotForm extends Component {
             <option value="1">Background 1</option>
             <option value="2">Background 2</option>
           </select>
-        </div>
+        </form>
 
         <img alt="robot" src={url} />
       </div>;

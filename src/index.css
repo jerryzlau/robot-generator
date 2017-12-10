@@ -8,5 +8,23 @@ body {
 .App h1 {
   display: flex;
   justify-content: center;
+}
 
+.component {
+  border-radius: 5px;
+  background: #59C3C3;
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  background: #EBEBEB;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
 }

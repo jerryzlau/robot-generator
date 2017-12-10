@@ -1,20 +1,8 @@
-.breach-email {
-  border-radius: 5px;
-  background: #59C3C3;
-  padding: 30px;
-  margin: 30px;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.breach-email form {
+.hack {
   background: #EBEBEB;
-  padding: 30px;
   border-radius: 5px;
-  display: flex;
-  justify-content: space-around;
+  padding: 10px;
+  margin: 10px;
 }
 
 .hack-info {
@@ -26,6 +14,14 @@
   margin: 0px;
   padding: 20px;
   padding-top: 0px;
+}
+
+.company-logo {
+  width: 230px;
+  height: 130px;
+  background: white;
+  font-size: 30px;
+  color: red;
 }
 
 

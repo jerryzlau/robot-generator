@@ -27,20 +27,20 @@ class Weather extends Component {
   getLocation(){
     const { lat, lng } = this.state;
     const url = `https://www.metaweather.com/api/location/search/?lattlong=${lat},${lng}`;
-    fetch(url, {mode: 'no-cors'})
+    fetch(url)
       .then(res => console.log(res));
   }
 
   render() {
     if(this.state.lat && this.state.lng){
       return (
-        <div className="weather"> 
+        <div className="component"> 
           {this.getLocation()}
         </div>
       );
     }else{
       return( 
-        <div className="weather">
+        <div className="component">
           <h1>Loading...</h1>
         </div>
       );

@@ -35,10 +35,11 @@ class BreachEmail extends Component {
         return (
           <div key={idx}
             className="hack">
-            <h4>{hack.Title}</h4>
+            <h2>{hack.Title}</h2>
             <div className="hack-info">
-              <img alt="company-logo"
-              src={`https://logo.clearbit.com/${hack.Domain}`} />
+              <img alt="Image Not Found"
+              className="company-logo"
+              src={`https://logo.clearbit.com/${hack.Domain}`}/>
               <p dangerouslySetInnerHTML={{__html: hack.Description}}/>
             </div>
           </div>
@@ -53,8 +54,8 @@ class BreachEmail extends Component {
 
   render() {
     return (
-      <div className="breach-email">
-        <h1>Have your email been pwned?</h1>
+      <div className="component">
+        <h1>Has your email been pwned?</h1>
         <form onSubmit={this.checkEmail}>
           <label>Check Email:
             <input type="text"
