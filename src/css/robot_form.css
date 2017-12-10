@@ -1,7 +1,6 @@
 .App h1 {
   display: flex;
   justify-content: center;
-  color: white;
   /* border: 1px solid black; */
 }
 
@@ -22,15 +21,6 @@
   /* border: 1px solid black; */
 }
 
-.inputs * {
-  cursor: pointer;
-}
-
-.inputs label {
-  display: flex; 
-  flex-direction: column;
-}
-
 .inputs input:focus {
   outline: none;
 }
@@ -46,7 +36,7 @@
 }
 
 img {
-  width: 200px;
-  height: 200px;
+  max-width: 400px;
+  max-height: 400px;
   /* border: 1px solid black; */
 }
