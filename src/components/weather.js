@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getLocation } from '../util/weather_util';
+import '../css/weather.css';
 
 class Weather extends Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class Weather extends Component {
   getLocation(){
     const { lat, lng } = this.state;
     const url = `https://www.metaweather.com/api/location/search/?lattlong=${lat},${lng}`;
-    fetch(url)
+    fetch(url, {mode: 'no-cors'})
       .then(res => console.log(res));
   }
 

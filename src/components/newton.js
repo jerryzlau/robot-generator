@@ -19,7 +19,6 @@ class Newton extends Component {
     const { operation, expression } = this.state;
     if(operation && expression){
       const url = `https://newton.now.sh/${operation}/${expression}`;
-      console.log(url);
       fetch(url)
         .then(res => res.json())
         .then(ans => {
@@ -80,6 +79,7 @@ class Newton extends Component {
           </label>
           <label>Expression: 
             <input type='text'
+              value={expression}
               onChange={this.update('expression')}/>
           </label>
           <input type='submit'

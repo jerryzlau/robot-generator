@@ -37,7 +37,8 @@ class BreachEmail extends Component {
             className="hack">
             <h4>{hack.Title}</h4>
             <div className="hack-info">
-              <img src={`https://logo.clearbit.com/${hack.Domain}`} />
+              <img alt="company-logo"
+              src={`https://logo.clearbit.com/${hack.Domain}`} />
               <p dangerouslySetInnerHTML={{__html: hack.Description}}/>
             </div>
           </div>

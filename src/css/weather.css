@@ -1,0 +1,10 @@
+.weather {
+  border-radius: 5px;
+  background: #59C3C3;
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
