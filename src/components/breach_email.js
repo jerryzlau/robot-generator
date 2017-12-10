@@ -16,7 +16,7 @@ class BreachEmail extends Component {
     e.preventDefault();
     const { email } = this.state;
     this.setState({email: ''});
-    fetch(`https://haveibeenpwned.com/api/breachedaccount/${email}`)
+    fetch(`https://haveibeenpwned.com/api/v2/breachedaccount/${email}`)
     .then(res => res.json())
     .then(hacks => this.setState({hacks}))
     .catch(err => this.setState({hacks: ''}));
@@ -33,7 +33,10 @@ class BreachEmail extends Component {
     if(hacks){
       return hacks.map((hack, idx) => {
         return (
-          <p key={idx}>{hack}</p>
+          <li>
+            <h4 key={idx}>{hack.Title}</h4>
+            <img src={`https://logo.clearbit.com/${hack.Domain}`}/>
+          </li>
         );
       });
     }else{
