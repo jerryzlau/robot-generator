@@ -51,7 +51,6 @@ class BreachEmail extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="breach-email">
         <h1>Have your email been pwned?</h1>

@@ -1,15 +1,15 @@
-.breach-email {
+.newton {
   border-radius: 5px;
   background: #59C3C3;
   padding: 30px;
   margin: 30px;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.breach-email form {
+.newton form {
   background: #EBEBEB;
   padding: 30px;
   border-radius: 5px;
@@ -17,16 +17,3 @@
   justify-content: space-around;
   width: 500px;
 }
-
-.hack-info {
-  display: flex;
-  flex-direction: row;
-}
-
-.hack-info p {
-  margin: 0px;
-  padding: 20px;
-  padding-top: 0px;
-}
-
-

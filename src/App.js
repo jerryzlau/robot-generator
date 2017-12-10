@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import RobotForm from './components/robot_form';
 import Weather from './components/weather';
 import BreachEmail from './components/breach_email';
+import Newton from './components/newton';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <RobotForm />
         {/* <Weather /> */}
         <BreachEmail />
+        <Newton />
       </div>
     );
   }
