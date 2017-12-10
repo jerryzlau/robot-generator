@@ -27,9 +27,8 @@ class Weather extends Component {
   getLocation(){
     const { lat, lng } = this.state;
     const url = `https://www.metaweather.com/api/location/search/?lattlong=${lat},${lng}`;
-    fetch(url, {
-      mode: 'no-cors'
-    }).then(res => console.log(res));
+    fetch(url)
+      .then(res => console.log(res));
   }
 
   render() {

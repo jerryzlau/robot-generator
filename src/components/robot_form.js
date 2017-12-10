@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/robot_form.css';
 
 class RobotForm extends Component {
   constructor(props) {

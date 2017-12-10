@@ -4,3 +4,9 @@ body {
   font-family: sans-serif;
   background: rgb(57, 53, 53);
 }
+
+.App h1 {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
