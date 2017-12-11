@@ -20,7 +20,6 @@ class RobotForm extends Component {
   }
 
   render() {
-
     const { name, type, rangeX, rangeY, backGround } = this.state;
     const url = `https://robohash.org/${name}/${type}/bgset_bg${backGround}/?size=${rangeX}x${rangeY}`;
     
