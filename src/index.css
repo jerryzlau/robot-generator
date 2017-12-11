@@ -22,9 +22,14 @@ body {
 }
 
 form {
-  background: #EBEBEB;
+  background: white;
   padding: 30px;
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+}
+
+form * {
+  margin: 5px;
 }

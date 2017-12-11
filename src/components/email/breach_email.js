@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/breach_email.css';
+import BreachEmailItem from './breach_email_item';
 
 class BreachEmail extends Component {
   constructor(props) {
@@ -33,16 +33,8 @@ class BreachEmail extends Component {
     if(hacks){
       return hacks.map((hack, idx) => {
         return (
-          <div key={idx}
-            className="hack">
-            <h2>{hack.Title}</h2>
-            <div className="hack-info">
-              <img alt="Image Not Found"
-              className="company-logo"
-              src={`https://logo.clearbit.com/${hack.Domain}`}/>
-              <p dangerouslySetInnerHTML={{__html: hack.Description}}/>
-            </div>
-          </div>
+          <BreachEmailItem key={idx}
+            hack={hack} />
         );
       });
     }else{

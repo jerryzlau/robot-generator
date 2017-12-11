@@ -1,10 +1,23 @@
+.weather img {
+  width: 200px;
+  height: 200px;
+}
+
 .weather {
-  border-radius: 5px;
-  background: #59C3C3;
-  padding: 30px;
-  margin: 30px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background: white;
+}
+
+.weather-left {
+  width: 100%;
+}
+
+.weather-right {
+  width: 100%;
 }
