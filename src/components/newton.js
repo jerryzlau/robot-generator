@@ -25,7 +25,16 @@ class Newton extends Component {
           if(ans.error){
             this.setState({result: ans.error});
           }else{
-            this.setState({ result: ans.result });
+            let result;
+            console.log(ans.result, '=====');
+            if(typeof ans.result === 'object'){
+              result = '[';
+              result += ans.result.toString();
+              result += ']';
+            }else{
+              result = ans.result;
+            }
+            this.setState({ result });
           }
         });
     }
@@ -36,7 +45,7 @@ class Newton extends Component {
       'simplify',
       'factor',
       'derive',
-      'integerate',
+      'integrate',
       'zeroes',
       'tangent',
       'area',
